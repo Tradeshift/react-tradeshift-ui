@@ -69,10 +69,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wejendorp/react-tradeshift-ui.git"
+    "url": "https://github.com/Tradeshift/react-tradeshift-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/wejendorp/react-tradeshift-ui/issues"
+    "url": "https://github.com/Tradeshift/react-tradeshift-ui/issues"
   },
-  "homepage": "https://github.com/wejendorp/react-tradeshift-ui#readme"
+  "homepage": "https://github.com/Tradeshift/react-tradeshift-ui#readme"
 }
