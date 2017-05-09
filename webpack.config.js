@@ -3,9 +3,6 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-// Note: defined here because it will be used more than once.
-const cssFilename = 'dist/[name].css';
-
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
 // The development configuration is different and lives in a separate file.
@@ -69,7 +66,7 @@ module.exports = {
 		// This helps ensure the builds are consistent if source hasn't changed:
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		// Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
-		new ExtractTextPlugin(cssFilename)
+		new ExtractTextPlugin('dist/[name].css')
 	],
 	// Some libraries import Node modules but don't use them in the browser.
 	// Tell Webpack to provide empty mocks for them so importing them works.
