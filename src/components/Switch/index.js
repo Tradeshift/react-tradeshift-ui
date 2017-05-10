@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Switch = ({ label, checked, disabled, readOnly }) => (
-	<label htmlFor="checkbox">
+const Switch = ({ id, label, checked, disabled, readOnly }) => (
+	<label htmlFor={id}>
 		<span>{label}</span>
-		<input type="checkbox" checked={checked} disabled={disabled} readOnly={readOnly} />
+		<input type="checkbox" id={id} checked={checked} disabled={disabled} readOnly={readOnly} />
 	</label>
 );
 
 Switch.propTypes = {
+	id: PropTypes.string.isRequired,
 	label: PropTypes.string.isRequired,
 	checked: PropTypes.bool,
 	disabled: PropTypes.bool,
@@ -16,6 +17,7 @@ Switch.propTypes = {
 };
 
 Switch.defaultProps = {
+	id: 'swich',
 	label: '',
 	checked: false,
 	disabled: false,

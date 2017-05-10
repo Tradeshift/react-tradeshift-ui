@@ -12,6 +12,7 @@ stories.addWithInfo(
 			<fieldset>
 				<span>Settings Page</span>
 				<Switch
+					id={text('id', 'switch-one')}
 					label={text('label', 'Switch one')}
 					checked={boolean('checked', true)}
 					disabled={boolean('disabled', false)}
