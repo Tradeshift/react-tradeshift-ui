@@ -1,12 +1,25 @@
 const path = require('path');
-
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const reactExternal = {
+	root: 'React',
+	commonjs2: 'react',
+	commonjs: 'react',
+	amd: 'react'
+};
+
+const reactDOMExternal = {
+	root: 'ReactDOM',
+	commonjs2: 'react-dom',
+	commonjs: 'react-dom',
+	amd: 'react-dom'
+};
 
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
 // The development configuration is different and lives in a separate file.
-module.exports = {
+const config = {
 	// Don't attempt to continue if there are any errors.
 	bail: true,
 	entry: {
@@ -14,8 +27,8 @@ module.exports = {
 	},
 	output: {
 		filename: './dist/[name].js',
-		library: 'react-tradeshift-ui',
-		libraryTarget: 'commonjs2'
+		library: 'TSReact',
+		libraryTarget: 'umd'
 	},
 	resolve: {
 		extensions: ['.js', '.json', '.jsx']
@@ -76,8 +89,9 @@ module.exports = {
 		tls: 'empty'
 	},
 	externals: {
-		react: 'react',
-		'react-dom': 'react-dom',
-		'prop-types': 'prop-types'
+		react: reactExternal,
+		'react-dom': reactDOMExternal
 	}
 };
+
+module.exports = config;
