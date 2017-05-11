@@ -1,3 +1,3 @@
 import './Aside';
 import './Menu';
-import './Switch';
+import './Form/Switch';
