@@ -1,0 +1,93 @@
+exports[`Aside Controlled mode 1`] = `
+<TestWrapper>
+  <Aside
+    isLoading={false}
+    isOpen={false}
+    loadingMessage="Loading..."
+    onClose={[Function]}
+    onClosed={[Function]}
+    onOpen={[Function]}
+    onOpened={[Function]}
+    title="Aside demo">
+    <Menu>
+      <MenuItem
+        disabled={false}
+        selected={false}>
+        Menu item
+      </MenuItem>
+    </Menu>
+  </Aside>
+</TestWrapper>
+`;
+
+exports[`Buttons Icon Button 1`] = `
+<TestWrapper>
+  <Button
+    busy={false}
+    classes={
+      Array [
+        "ts-tertiary",
+      ]
+    }
+    htmlProps={Object {}}
+    id="switch-one">
+    <i
+      className="ts-icon-locked" />
+  </Button>
+</TestWrapper>
+`;
+
+exports[`Buttons Text Button 1`] = `
+<TestWrapper>
+  <Button
+    busy={false}
+    classes={
+      Array [
+        "ts-primary",
+        "ts-micro",
+      ]
+    }
+    htmlProps={Object {}}
+    id="switch-one">
+    <span>
+      Default Button
+    </span>
+  </Button>
+</TestWrapper>
+`;
+
+exports[`Menu Basic usage 1`] = `
+<TestWrapper>
+  <Menu>
+    <MenuItem
+      disabled={false}
+      selected={true}>
+      Menu item 1
+    </MenuItem>
+    <MenuItem
+      disabled={false}
+      selected={false}>
+      Menu item 2
+    </MenuItem>
+  </Menu>
+</TestWrapper>
+`;
+
+exports[`Switch Switch should be used in a form 1`] = `
+<TestWrapper>
+  <form
+    data-ts="Form">
+    <fieldset>
+      <span>
+        Settings Page
+      </span>
+      <Switch
+        checked={true}
+        disabled={false}
+        id="switch-one"
+        label="Switch one"
+        readOnly={false} />
+    </fieldset>
+  </form>
+</TestWrapper>
+`;

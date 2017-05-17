@@ -40,9 +40,10 @@ class Button extends Component {
 		return (
 			<button
 				id={this.props.id}
-				data-classes={this.props.classes}
 				data-ts="Button"
 				{...buttonProps}
+				// This is where we can pass in arbitrary HTML attributes
+				{...this.props.htmlProps}
 				// Set this ref so we can grab the classList later after
 				// TS.ui spiritualizes and adds classes.
 				ref={el => (this.button = el)}
@@ -57,13 +58,15 @@ Button.propTypes = {
 	busy: PropTypes.bool,
 	id: PropTypes.string,
 	classes: PropTypes.arrayOf(PropTypes.string),
-	children: PropTypes.element.isRequired
+	children: PropTypes.element.isRequired,
+	htmlProps: PropTypes.objectOf(PropTypes.string)
 };
 
 Button.defaultProps = {
 	busy: false,
 	classes: [],
 	id: '',
+	htmlProps: {},
 	children: <span>Default Button</span>
 };
 
