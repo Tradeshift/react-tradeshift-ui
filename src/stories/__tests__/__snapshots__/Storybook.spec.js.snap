@@ -50,11 +50,7 @@ exports[`Buttons Text Button 1`] = `
     htmlProps={Object {}}
     id="switch-one">
     <span>
-<<<<<<< HEAD
       Default Button
-=======
-      Controlled mode
->>>>>>> b4e43cf84c1cd7ad1066282f9ea7da1313529708
     </span>
   </Button>
 </TestWrapper>
@@ -83,46 +79,32 @@ exports[`Switch Switch should be used in a form 1`] = `
     data-ts="Form">
     <fieldset>
       <span>
-        Settings Page
+        Controlled mode
       </span>
       <Switch
         checked={true}
         defaultChecked={undefined}
         disabled={false}
         id="switch-one"
-<<<<<<< HEAD
         label="Switch one"
-        readOnly={false} />
-    </fieldset>
-  </form>
-</TestWrapper>
-=======
         name=""
         onChange={[Function]}
-        type="checkbox"
         value={undefined} />
-    </label>
-  </fieldset>
-  <fieldset>
-    <span>
-      Uncontrolled mode
-    </span>
-    <label
-      htmlFor="switch-two">
+    </fieldset>
+    <fieldset>
       <span>
-        Switch two
+        Uncontrolled mode
       </span>
-      <input
+      <Switch
         checked={undefined}
         defaultChecked={true}
         disabled={false}
         id="switch-two"
+        label="Switch two"
         name=""
         onChange={[Function]}
-        type="checkbox"
         value={undefined} />
-    </label>
-  </fieldset>
-</form>
->>>>>>> b4e43cf84c1cd7ad1066282f9ea7da1313529708
+    </fieldset>
+  </form>
+</TestWrapper>
 `;
