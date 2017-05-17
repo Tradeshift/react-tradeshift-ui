@@ -1,7 +1,7 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf, action } from '@kadira/storybook';
 import { boolean, text } from '@kadira/storybook-addon-knobs';
-import { Switch } from '../components';
+import { Switch } from '../../components';
 
 const stories = storiesOf('Switch', module);
 
@@ -10,13 +10,22 @@ stories.addWithInfo(
 	() => (
 		<form data-ts="Form">
 			<fieldset>
-				<span>Settings Page</span>
+				<span>Controlled mode</span>
 				<Switch
 					id={text('id', 'switch-one')}
 					label={text('label', 'Switch one')}
 					checked={boolean('checked', true)}
 					disabled={boolean('disabled', false)}
-					readOnly={boolean('readOnly', false)}
+					onChange={action('onChange')}
+				/>
+			</fieldset>
+			<fieldset>
+				<span>Uncontrolled mode</span>
+				<Switch
+					id={text('id2', 'switch-two')}
+					label={text('label2', 'Switch two')}
+					disabled={boolean('disabled2', false)}
+					defaultChecked
 				/>
 			</fieldset>
 		</form>

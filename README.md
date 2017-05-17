@@ -28,10 +28,19 @@ Development with minimal setup via [Storybook](https://github.com/storybooks/sto
 ```bash
 $ npm install
 $ npm start
-$ open http://localhost:9009
+$ open http://localhost:9009 # Open storybook
+$ npm test # Run jest specs in interactive mode
 ```
 
 will open the Storybook with hot module reloading enabled.
+
+**Troubleshooting**: If you are unable to run `npm test`, because of `EMFILE` errors, try installing watchman:
+```
+sudo chown -R $(whoami) /usr/local # If you migrated a previous homebrew to el capitan
+brew update
+brew install watchman
+```
+Alternatively, try running tests with `npm test -- --no-watchman`.
 
 ### Release
 Any code pushed to master will be automatically released to `npm` with an appropriate semantic version.
@@ -39,4 +48,12 @@ Releases are handled automatically by Travis-CI via [semantic-release](https://g
 and [commitizen](http://commitizen.github.io/cz-cli/) commit message conventions.
 
 ## License
-ISC. Copyright (c) 2017, Tradeshift.
+
+* You can always create forks on GitHub, submit Issues and Pull Requests.
+* You can only use Tradeshift-UI to make apps on a Tradeshift platform, e.g. tradeshift.com.
+* You can fix a bug until the bugfix is deployed by Tradeshift.
+* You can host Tradeshift UI yourself.
+* If you want to make a bigger change or just want to talk with us, reach out to our team here on GitHub.
+
+You can read the actual license agreement in the [LICENSE.md](https://github.com/Tradeshift/tradeshift-ui/blob/master/LICENSE.md).
+

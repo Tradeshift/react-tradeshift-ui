@@ -1,4 +1,4 @@
 import './Aside';
 import './Menu';
-import './Switch';
 import './Button';
+import './Form/Switch';
