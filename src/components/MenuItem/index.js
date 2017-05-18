@@ -12,10 +12,7 @@ const MenuItem = ({ children, selected, disabled }) => (
 );
 
 MenuItem.propTypes = {
-	children: PropTypes.oneOfType([
-		PropTypes.arrayOf(PropTypes.node),
-		PropTypes.node
-	]),
+	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 	selected: PropTypes.bool,
 	disabled: PropTypes.bool
 };
