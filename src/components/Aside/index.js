@@ -31,18 +31,18 @@ class Aside extends Component {
 
 	onRef(ref) {
 		this.ref = ref;
-		if (this.ref && this.ref.spirit) {
-			this.ref.spirit.onclose = this.onClose;
-			this.ref.spirit.onclosed = this.props.onClosed;
-			this.ref.spirit.onopen = this.onOpen;
-			this.ref.spirit.onopened = this.props.onOpened;
-		}
+		setTimeout(() => {
+			if (this.ref && this.ref.spirit) {
+				this.ref.spirit.onclose = this.onClose;
+				this.ref.spirit.onclosed = this.props.onClosed;
+				this.ref.spirit.onopen = this.onOpen;
+				this.ref.spirit.onopened = this.props.onOpened;
+			}
+		});
 	}
 
 	render() {
-		const busyMessage = this.props.isLoading
-			? this.props.loadingMessage
-			: undefined;
+		const busyMessage = this.props.isLoading ? this.props.loadingMessage : undefined;
 		const asideProps = {
 			'data-ts.title': this.props.title,
 			'data-ts.open': this.props.isOpen,
@@ -61,10 +61,7 @@ class Aside extends Component {
 }
 
 Aside.propTypes = {
-	children: PropTypes.oneOfType([
-		PropTypes.arrayOf(PropTypes.node),
-		PropTypes.node
-	]),
+	children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 	isLoading: PropTypes.bool,
 	isOpen: PropTypes.bool,
 	loadingMessage: PropTypes.string,
