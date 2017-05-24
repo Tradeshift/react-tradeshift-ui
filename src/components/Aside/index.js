@@ -30,14 +30,15 @@ class Aside extends Component {
 	}
 
 	onRef(ref) {
-		this.ref = ref;
-		setTimeout(() => {
-			if (this.ref && this.ref.spirit) {
-				this.ref.spirit.onclose = this.onClose;
-				this.ref.spirit.onclosed = this.props.onClosed;
-				this.ref.spirit.onopen = this.onOpen;
-				this.ref.spirit.onopened = this.props.onOpened;
-			}
+		if (!ref) {
+			return;
+		}
+
+		window.ts.ui.get(ref, spirit => {
+			spirit.onclose = this.onClose;
+			spirit.onclosed = this.props.onClosed;
+			spirit.onopen = this.onOpen;
+			spirit.onopened = this.props.onOpened;
 		});
 	}
 

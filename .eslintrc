@@ -4,7 +4,8 @@
 		"jest"
 	],
 	"env": {
-		"jest/globals": true
+		"jest/globals": true,
+		"browser": true
 	},
 	"rules": {
 		"arrow-parens": [
@@ -38,6 +39,7 @@
 		"react/jsx-indent": [
 			"error",
 			"tab"
-		]
+		],
+		"no-param-reassign": "off"
 	}
 }
