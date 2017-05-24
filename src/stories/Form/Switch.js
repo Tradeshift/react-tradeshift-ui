@@ -32,3 +32,5 @@ stories.addWithInfo(
 	),
 	{ inline: true }
 );
+
+export default Switch;

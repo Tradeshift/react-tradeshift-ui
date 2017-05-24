@@ -1,4 +1,21 @@
-import renderer from 'react-test-renderer';
+import React from 'react';
+import PropTypes from 'prop-types';
+
+// Shallow rendering allows us to get past DOM mocking issues
+const ReactShallowRenderer = require('react-test-renderer/shallow');
+
+const renderer = new ReactShallowRenderer();
+
+// This Wrapper allows us to render native components because the shallow
+// renderer only allows shallow mocking of native components so if we need to
+// wrap a component in a form for example, this allows us to test the story
+const TestWrapper = ({ children }) => <TestWrapper>{children}</TestWrapper>;
+TestWrapper.propTypes = {
+	children: PropTypes.element
+};
+TestWrapper.defaultProps = {
+	children: ''
+};
 
 // Mocked version of `import { action } from "@kadira/storybook"`.
 export const action = () => jest.fn();
@@ -8,9 +25,8 @@ export const storiesOf = groupName => {
 	const createSpec = (storyName, story) => {
 		describe(groupName, () => {
 			it(storyName, () => {
-				const component = renderer.create(story());
-
-				expect(component.toJSON()).toMatchSnapshot();
+				const component = renderer.render(<TestWrapper>{story()}</TestWrapper>);
+				expect(component).toMatchSnapshot();
 			});
 		});
 	};

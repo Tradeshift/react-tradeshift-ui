@@ -1,99 +1,112 @@
 exports[`Aside Controlled mode 1`] = `
-<portal>
-  <aside
-    data-ts="Aside"
-    data-ts.busy={undefined}
-    data-ts.open={false}
-    data-ts.title="Aside demo">
-    <div
-      data-ts="Panel">
-      <menu
-        data-ts="Menu">
-        <li
-          className="">
-          <button
-            disabled={false}>
-            <span>
-              Menu item
-            </span>
-          </button>
-        </li>
-      </menu>
-    </div>
-  </aside>
-</portal>
+<TestWrapper>
+  <Aside
+    isLoading={false}
+    isOpen={false}
+    loadingMessage="Loading..."
+    onClose={[Function]}
+    onClosed={[Function]}
+    onOpen={[Function]}
+    onOpened={[Function]}
+    title="Aside demo">
+    <Menu>
+      <MenuItem
+        disabled={false}
+        selected={false}>
+        Menu item
+      </MenuItem>
+    </Menu>
+  </Aside>
+</TestWrapper>
+`;
+
+exports[`Buttons Icon Button 1`] = `
+<TestWrapper>
+  <Button
+    busy={false}
+    classes={
+      Array [
+        "ts-tertiary",
+      ]
+    }
+    htmlProps={Object {}}
+    id="switch-one">
+    <i
+      className="ts-icon-locked" />
+  </Button>
+</TestWrapper>
+`;
+
+exports[`Buttons Text Button 1`] = `
+<TestWrapper>
+  <Button
+    busy={false}
+    classes={
+      Array [
+        "ts-primary",
+        "ts-micro",
+      ]
+    }
+    htmlProps={Object {}}
+    id="switch-one">
+    <span>
+      Default Button
+    </span>
+  </Button>
+</TestWrapper>
 `;
 
 exports[`Menu Basic usage 1`] = `
-<menu
-  data-ts="Menu">
-  <li
-    className="ts-checked">
-    <button
-      disabled={false}>
-      <span>
-        Menu item 1
-      </span>
-      <i
-        className="ts-icon-checked" />
-    </button>
-  </li>
-  <li
-    className="">
-    <button
-      disabled={false}>
-      <span>
-        Menu item 2
-      </span>
-    </button>
-  </li>
-</menu>
+<TestWrapper>
+  <Menu>
+    <MenuItem
+      disabled={false}
+      selected={true}>
+      Menu item 1
+    </MenuItem>
+    <MenuItem
+      disabled={false}
+      selected={false}>
+      Menu item 2
+    </MenuItem>
+  </Menu>
+</TestWrapper>
 `;
 
 exports[`Switch Switch should be used in a form 1`] = `
-<form
-  data-ts="Form">
-  <fieldset>
-    <span>
-      Controlled mode
-    </span>
-    <label
-      htmlFor="switch-one">
+<TestWrapper>
+  <form
+    data-ts="Form">
+    <fieldset>
       <span>
-        Switch one
+        Controlled mode
       </span>
-      <input
+      <Switch
         checked={true}
         defaultChecked={undefined}
         disabled={false}
         id="switch-one"
+        label="Switch one"
         name=""
         onChange={[Function]}
-        type="checkbox"
         value={undefined} />
-    </label>
-  </fieldset>
-  <fieldset>
-    <span>
-      Uncontrolled mode
-    </span>
-    <label
-      htmlFor="switch-two">
+    </fieldset>
+    <fieldset>
       <span>
-        Switch two
+        Uncontrolled mode
       </span>
-      <input
+      <Switch
         checked={undefined}
         defaultChecked={true}
         disabled={false}
         id="switch-two"
+        label="Switch two"
         name=""
         onChange={[Function]}
-        type="checkbox"
         value={undefined} />
-    </label>
-  </fieldset>
-</form>
+    </fieldset>
+  </form>
+</TestWrapper>
 `;
 
 exports[`TsLogo Basic usage 1`] = `
