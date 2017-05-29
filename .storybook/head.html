@@ -1,7 +1,19 @@
 <script src="https://d5wfroyti11sa.cloudfront.net/prod/client/ts-8.0.2.min.js?internal"></script>
 <style>
-	body {
+	.ts-maincontent {
 		padding: 2em;
-		overflow: auto;
+		background-color: #FFF;
 	}
 </style>
+<script>
+	ts.ui.ready(function() {
+		// Move the root element into the Tradeshift UI Template:
+		var main = document.createElement('main');
+		var root = document.getElementById('root');
+		root.setAttribute('data-ts', 'MainContent');
+		main.setAttribute('data-ts', 'Main');
+		main.appendChild(root);
+		document.body.appendChild(main);
+	});
+
+</script>
