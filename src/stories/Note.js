@@ -11,8 +11,9 @@ stories.addWithInfo(
 	() => {
 		const shouldShow = boolean('shouldShow', true);
 		const noteText = text('text', 'My awesome note');
+		const icon = text('icon', 'ts-icon-apps');
 		return shouldShow
-			? <Note icon={''} text={noteText} onClose={action('onClose')} />
+			? <Note icon={icon} text={noteText} onClose={action('onClose')} />
 			: 'Totally not a Note';
 	},
 	{ inline: true }
