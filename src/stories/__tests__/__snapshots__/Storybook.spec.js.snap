@@ -50,6 +50,8 @@ exports[`Menu Basic usage 1`] = `
 </menu>
 `;
 
+exports[`Note Basic usage 1`] = `null`;
+
 exports[`Switch Switch should be used in a form 1`] = `
 <form
   data-ts="Form">
