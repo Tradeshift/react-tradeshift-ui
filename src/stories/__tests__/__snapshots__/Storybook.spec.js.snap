@@ -50,6 +50,37 @@ exports[`Menu Basic usage 1`] = `
 </menu>
 `;
 
+exports[`Modal Controlled mode 1`] = `
+<portal>
+  <dialog
+    data-ts="Modal"
+    data-ts.open={false}
+    data-ts.title="Fullscreen Modal demo">
+    <div
+      data-ts="Panel">
+      <main
+        data-ts="Main">
+        <h1>
+          A Modal Example
+        </h1>
+        <p>
+          …
+        </p>
+        <p>
+          <button
+            className="ts-primary"
+            onClick={[Function]}>
+            <span>
+              Close the Modal
+            </span>
+          </button>
+        </p>
+      </main>
+    </div>
+  </dialog>
+</portal>
+`;
+
 exports[`Note Basic usage 1`] = `null`;
 
 exports[`Switch Switch should be used in a form 1`] = `
