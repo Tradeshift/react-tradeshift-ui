@@ -16,7 +16,8 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "commitmsg": "opt --in commit-msg --exec \"validate-commit-msg\"",
     "precommit": "lint-staged",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "commit-scope": "cmzs --list"
   },
   "lint-staged": {
     "*.js": [
@@ -46,6 +47,7 @@
     "babel-preset-react": "^6.24.1",
     "codecov.io": "^0.1.6",
     "commitizen": "^2.9.6",
+    "commitizen-scopes": "0.0.8",
     "cz-conventional-changelog": "^2.0.0",
     "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
