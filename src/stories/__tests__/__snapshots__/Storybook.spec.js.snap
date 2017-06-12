@@ -83,6 +83,8 @@ exports[`Modal Controlled mode 1`] = `
 
 exports[`Note Basic usage 1`] = `null`;
 
+exports[`StatusBar Controlled mode 1`] = `null`;
+
 exports[`Switch Switch should be used in a form 1`] = `
 <form
   data-ts="Form">
