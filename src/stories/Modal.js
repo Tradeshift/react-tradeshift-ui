@@ -16,7 +16,7 @@ stories.addWithInfo(
 				label: text('button_title', 'Button title'),
 				type: text('button_class', 'ts-primary'),
 				onclick() {
-					console.log('hi');
+					action('onClick');
 				}
 			}
 		];
@@ -24,8 +24,6 @@ stories.addWithInfo(
 			<Modal
 				title={text('title', 'Fullscreen Modal demo')}
 				isOpen={boolean('isOpen', false)}
-				loadingMessage={text('loadingMessage', 'Loading...')}
-				isLoading={boolean('isLoading', false)}
 				onOpen={action('onOpen')}
 				onOpened={action('onOpened')}
 				onClose={action('onClose')}
