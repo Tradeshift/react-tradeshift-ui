@@ -24,7 +24,7 @@ describe('StatusBar', () => {
 			expect(component.update).toHaveBeenCalledWith(true, true, 'Bar', []);
 		});
 
-		it('if visible prop is false', () => {
+		it('hides if visible prop is false', () => {
 			expect(component.bar).toBeDefined();
 			wrapper.setProps({
 				visible: false
