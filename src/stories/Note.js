@@ -1,6 +1,6 @@
 import React from 'react';
-import { storiesOf, action } from '@kadira/storybook';
-import { boolean, text } from '@kadira/storybook-addon-knobs';
+import { storiesOf, action } from '@storybook/react';
+import { boolean, text } from '@storybook/addon-knobs';
 import { Note } from '../components';
 
 const stories = storiesOf('Note', module);

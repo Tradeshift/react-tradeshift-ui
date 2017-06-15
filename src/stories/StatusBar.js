@@ -1,6 +1,6 @@
 import React from 'react';
-import { storiesOf, action } from '@kadira/storybook';
-import { text, boolean, number } from '@kadira/storybook-addon-knobs';
+import { storiesOf, action } from '@storybook/react';
+import { text, boolean, number } from '@storybook/addon-knobs';
 import _ from 'lodash';
 
 import { StatusBar } from '../components';

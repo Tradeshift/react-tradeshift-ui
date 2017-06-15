@@ -1,5 +1,5 @@
 //  To get our default addons (actions and links)
-import '@kadira/storybook/addons';
+import '@storybook/react/addons';
 
-import '@kadira/storybook-addon-knobs/register'
-import '@kadira/storybook-addon-options/register';
+import '@storybook/addon-knobs/register';
+import '@storybook/addon-options/register';

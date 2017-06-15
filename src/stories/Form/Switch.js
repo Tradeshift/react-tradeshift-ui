@@ -1,13 +1,13 @@
 import React from 'react';
-import { storiesOf, action } from '@kadira/storybook';
-import { boolean, text } from '@kadira/storybook-addon-knobs';
+import { storiesOf, action } from '@storybook/react';
+import { boolean, text } from '@storybook/addon-knobs';
 import { Switch } from '../../components';
 
 const stories = storiesOf('Switch', module);
 
 stories.addWithInfo(
 	'Switch should be used in a form',
-	() => (
+	() =>
 		<form data-ts="Form">
 			<fieldset>
 				<span>Controlled mode</span>
@@ -28,7 +28,6 @@ stories.addWithInfo(
 					defaultChecked
 				/>
 			</fieldset>
-		</form>
-	),
+		</form>,
 	{ inline: true }
 );

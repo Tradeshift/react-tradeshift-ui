@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
-jest.mock('@kadira/storybook', () => require('./__mocks__/storybook'));
-jest.mock('@kadira/storybook-addon-knobs', () => require('./__mocks__/knobs'));
+jest.mock('@storybook/react', () => require('./__mocks__/storybook'));
+jest.mock('@storybook/addon-knobs', () => require('./__mocks__/knobs'));
 window.ts = {
 	ui: {
 		ready: cb => cb(),
