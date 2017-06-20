@@ -31,6 +31,63 @@ exports[`Aside Controlled mode 1`] = `
 </portal>
 `;
 
+exports[`Form Basic structure 1`] = `
+<form
+  data-ts="Form"
+/>
+`;
+
+exports[`Form FormSwitch should be used in a form 1`] = `
+<form
+  data-ts="Form"
+>
+  <fieldset>
+    <span>
+      Controlled mode
+    </span>
+    <label
+      htmlFor="switch-one"
+    >
+      <span>
+        Switch one
+      </span>
+      <input
+        checked={true}
+        defaultChecked={undefined}
+        disabled={false}
+        id="switch-one"
+        name=""
+        onChange={[Function]}
+        type="checkbox"
+        value={undefined}
+      />
+    </label>
+  </fieldset>
+  <fieldset>
+    <span>
+      Uncontrolled mode
+    </span>
+    <label
+      htmlFor="switch-two"
+    >
+      <span>
+        Switch two
+      </span>
+      <input
+        checked={undefined}
+        defaultChecked={true}
+        disabled={false}
+        id="switch-two"
+        name=""
+        onChange={[Function]}
+        type="checkbox"
+        value={undefined}
+      />
+    </label>
+  </fieldset>
+</form>
+`;
+
 exports[`Menu Basic usage 1`] = `
 <menu
   data-ts="Menu"
@@ -105,57 +162,6 @@ exports[`StatusBar Hide bar 1`] = `null`;
 exports[`StatusBar Show buttons 1`] = `null`;
 
 exports[`StatusBar Show message 1`] = `null`;
-
-exports[`Switch Switch should be used in a form 1`] = `
-<form
-  data-ts="Form"
->
-  <fieldset>
-    <span>
-      Controlled mode
-    </span>
-    <label
-      htmlFor="switch-one"
-    >
-      <span>
-        Switch one
-      </span>
-      <input
-        checked={true}
-        defaultChecked={undefined}
-        disabled={false}
-        id="switch-one"
-        name=""
-        onChange={[Function]}
-        type="checkbox"
-        value={undefined}
-      />
-    </label>
-  </fieldset>
-  <fieldset>
-    <span>
-      Uncontrolled mode
-    </span>
-    <label
-      htmlFor="switch-two"
-    >
-      <span>
-        Switch two
-      </span>
-      <input
-        checked={undefined}
-        defaultChecked={true}
-        disabled={false}
-        id="switch-two"
-        name=""
-        onChange={[Function]}
-        type="checkbox"
-        value={undefined}
-      />
-    </label>
-  </fieldset>
-</form>
-`;
 
 exports[`TsLogo Basic usage 1`] = `
 <svg
