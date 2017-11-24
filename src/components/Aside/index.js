@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Portal from 'react-portal';
-import _ from 'lodash';
 
 const noop = () => {};
 
@@ -45,11 +44,9 @@ class Aside extends Component {
 	}
 
 	wrapContent(nodes) {
-		if (_.isArray(nodes)) {
-			const wrappedTabs = _.every(nodes, node => _.get(node, ['props', 'data-ts']) === 'Panel');
-			return wrappedTabs ? nodes : <div data-ts="Panel">{nodes}</div>;
-		}
-		return _.get(nodes, ['props', 'data-ts']) === 'Panel' ? nodes : <div data-ts="Panel">{nodes}</div>;
+		const children = React.Children.toArray(this.props.children);
+		const wrappedTabs = children.every(node => node.props['data-ts'] === 'Panel');
+		return nodes && wrappedTabs ? nodes : <div data-ts="Panel">{nodes}</div>;
 	}
 
 	render() {
