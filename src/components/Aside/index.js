@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Portal from 'react-portal';
+import _ from 'lodash';
 
 const noop = () => {};
 
@@ -10,6 +11,7 @@ class Aside extends Component {
 		this.onRef = this.onRef.bind(this);
 		this.onOpen = this.onOpen.bind(this);
 		this.onClose = this.onClose.bind(this);
+		this.wrapContent = this.wrapContent.bind(this);
 
 		// Sync open flag for onclose / onopen callbacks
 		this.isOpen = props.isOpen;
@@ -42,6 +44,14 @@ class Aside extends Component {
 		});
 	}
 
+	wrapContent(nodes) {
+		if (_.isArray(nodes)) {
+			const wrappedTabs = _.every(nodes, node => _.get(node, ['props', 'data-ts']) === 'Panel');
+			return wrappedTabs ? nodes : <div data-ts="Panel">{nodes}</div>;
+		}
+		return _.get(nodes, ['props', 'data-ts']) === 'Panel' ? nodes : <div data-ts="Panel">{nodes}</div>;
+	}
+
 	render() {
 		const busyMessage = this.props.isLoading ? this.props.loadingMessage : undefined;
 		const asideProps = {
@@ -49,12 +59,12 @@ class Aside extends Component {
 			'data-ts.open': this.props.isOpen,
 			'data-ts.busy': busyMessage
 		};
+
+		const content = this.wrapContent(this.props.children);
 		return (
 			<Portal isOpened>
 				<aside data-ts="Aside" {...asideProps} ref={this.onRef}>
-					<div data-ts="Panel">
-						{this.props.children}
-					</div>
+					{content}
 				</aside>
 			</Portal>
 		);
