@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Aside Aside tabs 1`] = `
+<portal>
+  <aside
+    data-ts="Aside"
+    data-ts.busy={undefined}
+    data-ts.open={false}
+    data-ts.title="Aside demo"
+  >
+    <div
+      data-ts="Panel"
+      data-ts.label="tab 0"
+    >
+      tab 0 content
+    </div>
+    <div
+      data-ts="Panel"
+      data-ts.label="tab 1"
+    >
+      tab 1 content
+    </div>
+  </aside>
+</portal>
+`;
+
 exports[`Aside Controlled mode 1`] = `
 <portal>
   <aside
