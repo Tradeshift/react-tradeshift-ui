@@ -44,7 +44,7 @@ class Aside extends Component {
 	}
 
 	wrapContent(nodes) {
-		const children = React.Children.toArray(this.props.children);
+		const children = React.Children.toArray(nodes);
 		const wrappedTabs = children.every(node => node.props['data-ts'] === 'Panel');
 		return nodes && wrappedTabs ? nodes : <div data-ts="Panel">{nodes}</div>;
 	}
