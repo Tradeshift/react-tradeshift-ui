@@ -216,6 +216,8 @@ exports[`Modal Controlled mode w/ buttons 1`] = `
 
 exports[`Note Basic usage 1`] = `null`;
 
+exports[`Notification Show Notification 1`] = `null`;
+
 exports[`StatusBar Hide bar 1`] = `null`;
 
 exports[`StatusBar Show buttons 1`] = `null`;

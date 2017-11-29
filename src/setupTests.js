@@ -5,7 +5,12 @@ window.ts = {
 	ui: {
 		ready: cb => cb(),
 		Note: jest.fn().mockReturnValue({}),
-		Notification: jest.fn().mockReturnValue({}),
+		Notification: {
+			success: jest.fn(),
+			info: jest.fn(),
+			error: jest.fn(),
+			warning: jest.fn()
+		},
 		StatusBar: {
 			linkable: jest.fn(),
 			message: jest.fn(),

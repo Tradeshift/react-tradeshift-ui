@@ -4,3 +4,4 @@ export const text = defaultVal;
 export const label = defaultVal;
 export const boolean = defaultVal;
 export const number = defaultVal;
+export const select = defaultVal;

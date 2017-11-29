@@ -3,6 +3,7 @@ import './Form';
 import './Menu';
 import './Modal';
 import './Note';
+import './Notification';
 import './StatusBar';
 import './FormSwitch';
 import './TsLogo';
