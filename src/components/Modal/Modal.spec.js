@@ -7,7 +7,7 @@ describe('Modal', () => {
 	// Add specific tests for ui-spirit related functions
 	describe('spirit interaction', () => {
 		it('respects isOpen in controlled mode', () => {
-			const wrapper = shallow(<Modal isOpen />);
+			const wrapper = shallow(<Modal isOpen buttons={[]} />);
 
 			// Mock the spirit:
 			const spirit = {

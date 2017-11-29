@@ -43,7 +43,9 @@ class Modal extends Component {
 			spirit.onclosed = this.props.onClosed;
 			spirit.onopen = this.onOpen;
 			spirit.onopened = this.props.onOpened;
-			spirit.buttons(this.props.buttons);
+			if (this.props.buttons) {
+				spirit.buttons(this.props.buttons);
+			}
 		});
 	}
 
@@ -82,8 +84,7 @@ Modal.defaultProps = {
 	onClosed: noop,
 	onOpen: noop,
 	onOpened: noop,
-	title: 'Modal',
-	buttons: []
+	title: 'Modal'
 };
 
 export default Modal;
