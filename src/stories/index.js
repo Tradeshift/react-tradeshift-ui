@@ -1,8 +1,9 @@
 import './Aside';
 import './Form';
+import './FormInput';
+import './FormSwitch';
 import './Menu';
 import './Modal';
 import './Note';
 import './StatusBar';
-import './FormSwitch';
 import './TsLogo';

@@ -6,7 +6,8 @@ import { Form, FormSwitch } from '../components';
 const stories = storiesOf('Form', module);
 
 stories.addWithInfo(
-	'FormSwitch should be used in a form',
+	'FormSwitch',
+	'FormSwitch must be used inside the <Form> component',
 	() =>
 		<Form>
 			<fieldset>

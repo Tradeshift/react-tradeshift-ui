@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const noop = () => {};
 
-class Switch extends Component {
+class FormSwitch extends Component {
 	constructor(props) {
 		super(props);
 		this.onChange = this.onChange.bind(this);
@@ -38,7 +38,7 @@ class Switch extends Component {
 	}
 }
 
-Switch.propTypes = {
+FormSwitch.propTypes = {
 	id: PropTypes.string.isRequired,
 	label: PropTypes.string.isRequired,
 	name: PropTypes.string,
@@ -49,7 +49,7 @@ Switch.propTypes = {
 	onChange: PropTypes.func
 };
 
-Switch.defaultProps = {
+FormSwitch.defaultProps = {
 	label: '',
 	name: '',
 	value: undefined,
@@ -59,4 +59,4 @@ Switch.defaultProps = {
 	onChange: noop
 };
 
-export default Switch;
+export default FormSwitch;

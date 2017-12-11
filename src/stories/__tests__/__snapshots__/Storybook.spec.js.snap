@@ -61,7 +61,86 @@ exports[`Form Basic structure 1`] = `
 />
 `;
 
-exports[`Form FormSwitch should be used in a form 1`] = `
+exports[`Form FormInput 1`] = `
+<form
+  data-ts="Form"
+>
+  <h3>
+    No label
+  </h3>
+  <fieldset>
+    <label>
+      <input
+        label={undefined}
+        onChange={[Function]}
+        type="text"
+      />
+    </label>
+  </fieldset>
+  <h3>
+    With label
+  </h3>
+  <fieldset>
+    <label>
+      <span>
+        Text input with label
+      </span>
+      <input
+        label="Text input with label"
+        onChange={[Function]}
+        type="text"
+      />
+    </label>
+  </fieldset>
+  <h3>
+    Email
+  </h3>
+  <fieldset>
+    <label>
+      <span>
+        Email input
+      </span>
+      <input
+        label="Email input"
+        onChange={[Function]}
+        type="email"
+      />
+    </label>
+  </fieldset>
+  <h3>
+    Number
+  </h3>
+  <fieldset>
+    <label>
+      <span>
+        Number input
+      </span>
+      <input
+        label="Number input"
+        onChange={[Function]}
+        type="number"
+      />
+    </label>
+  </fieldset>
+  <h3>
+    Tel
+  </h3>
+  <fieldset>
+    <label>
+      <span>
+        Tel input
+      </span>
+      <input
+        label="Tel input"
+        onChange={[Function]}
+        type="tel"
+      />
+    </label>
+  </fieldset>
+</form>
+`;
+
+exports[`Form FormSwitch 1`] = `
 <form
   data-ts="Form"
 >
