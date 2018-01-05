@@ -1,45 +1,36 @@
 {
 	"extends": "airbnb",
-	"plugins": [
-		"jest"
-	],
+	"plugins": ["jest"],
 	"env": {
 		"jest/globals": true,
 		"browser": true
 	},
 	"rules": {
-		"arrow-parens": [
-			"error",
-			"as-needed"
-		],
-		"comma-dangle": [
-			"error",
-			"never"
-		],
+		"arrow-parens": ["error", "as-needed"],
+		"comma-dangle": ["error", "never"],
 		"import/no-extraneous-dependencies": [
 			"error",
 			{
 				"devDependencies": true
 			}
 		],
-		"indent": [
-			"error",
-			"tab"
-		],
+		"indent": ["error", "tab"],
 		"jest/no-disabled-tests": "warn",
 		"jest/no-focused-tests": "error",
 		"jest/no-identical-title": "error",
 		"jest/valid-expect": "error",
 		"no-tabs": "off",
 		"react/jsx-filename-extension": "off",
-		"react/jsx-indent-props": [
-			"error",
-			"tab"
-		],
-		"react/jsx-indent": [
-			"error",
-			"tab"
-		],
+		"react/jsx-indent-props": ["error", "tab"],
+		"react/jsx-indent": ["error", "tab"],
 		"no-param-reassign": "off"
+	},
+	"settings": {
+		"import/core-modules": [
+			"@storybook/addon-info",
+			"@storybook/addon-knobs",
+			"@storybook/addon-options",
+			"@storybook/react"
+		]
 	}
 }
