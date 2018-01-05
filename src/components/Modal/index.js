@@ -57,9 +57,7 @@ class Modal extends Component {
 		return (
 			<Portal isOpened>
 				<dialog data-ts="Modal" {...modalProps} ref={this.onRef}>
-					<div data-ts="Panel">
-						{this.props.children}
-					</div>
+					<div data-ts="Panel">{this.props.children}</div>
 				</dialog>
 			</Portal>
 		);
@@ -84,7 +82,8 @@ Modal.defaultProps = {
 	onClosed: noop,
 	onOpen: noop,
 	onOpened: noop,
-	title: 'Modal'
+	title: 'Modal',
+	buttons: undefined
 };
 
 export default Modal;

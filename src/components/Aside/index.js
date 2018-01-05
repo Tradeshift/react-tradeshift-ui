@@ -5,12 +5,17 @@ import Portal from 'react-portal';
 const noop = () => {};
 
 class Aside extends Component {
+	static wrapContent(nodes) {
+		const children = React.Children.toArray(nodes);
+		const wrappedTabs = children.every(node => node.props['data-ts'] === 'Panel');
+		return nodes && wrappedTabs ? nodes : <div data-ts="Panel">{nodes}</div>;
+	}
+
 	constructor(props) {
 		super(props);
 		this.onRef = this.onRef.bind(this);
 		this.onOpen = this.onOpen.bind(this);
 		this.onClose = this.onClose.bind(this);
-		this.wrapContent = this.wrapContent.bind(this);
 
 		// Sync open flag for onclose / onopen callbacks
 		this.isOpen = props.isOpen;
@@ -43,12 +48,6 @@ class Aside extends Component {
 		});
 	}
 
-	wrapContent(nodes) {
-		const children = React.Children.toArray(nodes);
-		const wrappedTabs = children.every(node => node.props['data-ts'] === 'Panel');
-		return nodes && wrappedTabs ? nodes : <div data-ts="Panel">{nodes}</div>;
-	}
-
 	render() {
 		const busyMessage = this.props.isLoading ? this.props.loadingMessage : undefined;
 		const asideProps = {
@@ -57,7 +56,7 @@ class Aside extends Component {
 			'data-ts.busy': busyMessage
 		};
 
-		const content = this.wrapContent(this.props.children);
+		const content = Aside.wrapContent(this.props.children);
 		return (
 			<Portal isOpened>
 				<aside data-ts="Aside" {...asideProps} ref={this.onRef}>
