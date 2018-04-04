@@ -56,4 +56,3 @@ and [commitizen](http://commitizen.github.io/cz-cli/) commit message conventions
 * If you want to make a bigger change or just want to talk with us, reach out to our team here on GitHub.
 
 You can read the actual license agreement in the [LICENSE.md](https://github.com/Tradeshift/tradeshift-ui/blob/master/LICENSE.md).
-
