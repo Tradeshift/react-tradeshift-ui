@@ -59,7 +59,7 @@ class Aside extends Component {
 		const content = Aside.wrapContent(this.props.children);
 		return (
 			<Portal isOpened>
-				<aside data-ts="Aside" {...asideProps} ref={this.onRef}>
+				<aside data-ts="Aside" {...asideProps} ref={this.onRef} className={this.props.className}>
 					{content}
 				</aside>
 			</Portal>
@@ -76,7 +76,8 @@ Aside.propTypes = {
 	onClosed: PropTypes.func,
 	onOpen: PropTypes.func,
 	onOpened: PropTypes.func,
-	title: PropTypes.string
+	title: PropTypes.string,
+	className: PropTypes.string
 };
 
 Aside.defaultProps = {
@@ -88,7 +89,8 @@ Aside.defaultProps = {
 	onClosed: noop,
 	onOpen: noop,
 	onOpened: noop,
-	title: 'Aside'
+	title: 'Aside',
+	className: ''
 };
 
 export default Aside;
