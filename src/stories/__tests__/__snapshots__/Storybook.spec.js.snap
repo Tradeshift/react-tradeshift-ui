@@ -3,7 +3,6 @@
 exports[`Aside Aside tabs 1`] = `
 <portal>
   <aside
-    className=""
     data-ts="Aside"
     data-ts.busy={undefined}
     data-ts.open={false}
@@ -28,7 +27,7 @@ exports[`Aside Aside tabs 1`] = `
 exports[`Aside Controlled mode 1`] = `
 <portal>
   <aside
-    className=""
+    className="aside-class"
     data-ts="Aside"
     data-ts.busy={undefined}
     data-ts.open={false}

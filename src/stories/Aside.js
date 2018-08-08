@@ -19,6 +19,7 @@ stories.addWithInfo(
 			onOpened={action('onOpened')}
 			onClose={action('onClose')}
 			onClosed={action('onClosed')}
+			className="aside-class"
 		>
 			<Menu>
 				<MenuItem>Menu item</MenuItem>

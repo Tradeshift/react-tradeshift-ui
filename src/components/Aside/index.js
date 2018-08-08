@@ -49,17 +49,22 @@ class Aside extends Component {
 	}
 
 	render() {
-		const busyMessage = this.props.isLoading ? this.props.loadingMessage : undefined;
+		const { isLoading, loadingMessage, title, isOpen, className } = this.props;
+		const busyMessage = isLoading ? loadingMessage : undefined;
 		const asideProps = {
-			'data-ts.title': this.props.title,
-			'data-ts.open': this.props.isOpen,
+			'data-ts.title': title,
+			'data-ts.open': isOpen,
 			'data-ts.busy': busyMessage
 		};
+
+		if (className) {
+			asideProps.className = className;
+		}
 
 		const content = Aside.wrapContent(this.props.children);
 		return (
 			<Portal isOpened>
-				<aside data-ts="Aside" {...asideProps} ref={this.onRef} className={this.props.className}>
+				<aside data-ts="Aside" {...asideProps} ref={this.onRef}>
 					{content}
 				</aside>
 			</Portal>
