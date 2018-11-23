@@ -60,6 +60,8 @@ exports[`Footer Open collaboration 1`] = `null`;
 
 exports[`Footer Show buttons 1`] = `null`;
 
+exports[`Footer Add notification badge 1`] = `null`;
+
 exports[`Form Basic structure 1`] = `
 <form
   data-ts="Form"

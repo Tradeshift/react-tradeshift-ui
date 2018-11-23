@@ -27,8 +27,19 @@ stories.addWithInfo(
 
 stories.addWithInfo(
 	'Open collaboration',
-	`The Footer component accepts an 'onOpenCollaboration' prop as a function to open the
-	collaboration panel`,
-	() => <Footer onOpenCollaboration={() => alert('hallo')} />,
+	'The Footer component accepts an *onOpenCollaboration* prop as a function to open the collaboration panel',
+	() => <Footer onOpenCollaboration={() => window.ts.ui.Notification.success('Go collaborate!')} />,
+	{ inline: true }
+);
+
+stories.addWithInfo(
+	'Add notification badge',
+	'The Footer component accepts an *badge* prop as a boolean that, if true, will show a notification badge over the icon. The is to be used in tandem with the *onOpenCollaboration* prop.',
+	() => (
+		<Footer
+			onOpenCollaboration={() => window.ts.ui.Notification.success('Go collaborate!')}
+			badge
+		/>
+	),
 	{ inline: true }
 );
