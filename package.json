@@ -2,7 +2,7 @@
   "name": "react-tradeshift-ui",
   "version": "0.0.0-semantically-released",
   "main": "dist/components.js",
-  "module": "src/components/index.js",
+  "module": "dist/components.js",
   "license": "SEE LICENSE IN LICENSE.md",
   "scripts": {
     "build": "webpack",
