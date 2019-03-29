@@ -4,7 +4,7 @@ exports[`Aside Aside tabs 1`] = `
 <portal>
   <aside
     data-ts="Aside"
-    data-ts.busy={undefined}
+    data-ts.busy=""
     data-ts.open={false}
     data-ts.title="Aside demo"
   >
@@ -29,7 +29,7 @@ exports[`Aside Controlled mode 1`] = `
   <aside
     className="aside-class"
     data-ts="Aside"
-    data-ts.busy={undefined}
+    data-ts.busy=""
     data-ts.open={false}
     data-ts.title="Aside demo"
   >
@@ -56,11 +56,11 @@ exports[`Aside Controlled mode 1`] = `
 </portal>
 `;
 
+exports[`Footer Add notification badge 1`] = `null`;
+
 exports[`Footer Open collaboration 1`] = `null`;
 
 exports[`Footer Show buttons 1`] = `null`;
-
-exports[`Footer Add notification badge 1`] = `null`;
 
 exports[`Form Basic structure 1`] = `
 <form

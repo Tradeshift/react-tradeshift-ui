@@ -50,7 +50,7 @@ class Aside extends Component {
 
 	render() {
 		const { isLoading, loadingMessage, title, isOpen, className } = this.props;
-		const busyMessage = isLoading ? loadingMessage : undefined;
+		const busyMessage = isLoading ? loadingMessage : '';
 		const asideProps = {
 			'data-ts.title': title,
 			'data-ts.open': isOpen,
