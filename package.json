@@ -71,6 +71,7 @@
   "dependencies": {
     "@types/classnames": "0.0.32",
     "classnames": "^2.2.5",
+    "lodash.debounce": "^4.0.8",
     "prop-types": "^15.5.8",
     "react-portal": "^3.1.0"
   },

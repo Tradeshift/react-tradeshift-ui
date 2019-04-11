@@ -8,3 +8,4 @@ import './Note';
 import './StatusBar';
 import './FormSwitch';
 import './TsLogo';
+import './Pager';

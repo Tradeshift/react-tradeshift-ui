@@ -229,6 +229,12 @@ exports[`Modal Controlled mode w/ buttons 1`] = `
 
 exports[`Note Basic usage 1`] = `null`;
 
+exports[`Pager Basic usage 1`] = `
+<menu
+  data-ts="Pager"
+/>
+`;
+
 exports[`StatusBar (deprecated) Hide bar 1`] = `null`;
 
 exports[`StatusBar (deprecated) Show buttons 1`] = `null`;
