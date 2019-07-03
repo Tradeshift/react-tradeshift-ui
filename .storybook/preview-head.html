@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="//d5wfroyti11sa.cloudfront.net/prod/client/ts-11.2.0.min.css" />
-<script src="//d5wfroyti11sa.cloudfront.net/prod/client/ts-11.2.0.min.js"></script>
+<link rel="stylesheet" href="//d5wfroyti11sa.cloudfront.net/prod/client/ts-12.2.0.min.css" />
+<script src="//d5wfroyti11sa.cloudfront.net/prod/client/ts-12.2.0.min.js"></script>
 
 <style>
 	.ts-maincontent {
@@ -10,12 +10,15 @@
 <script>
 	ts.ui.ready(function() {
 		// Move the root element into the Tradeshift UI Template:
+		var app = document.createElement('app');
 		var main = document.createElement('main');
 		var root = document.getElementById('root');
+		app.setAttribute('data-ts','App');
 		root.setAttribute('data-ts', 'MainContent');
 		main.setAttribute('data-ts', 'Main');
 		main.appendChild(root);
-		document.body.appendChild(main);
+		app.appendChild(main);
+		document.body.appendChild(app);
 	});
 
 </script>

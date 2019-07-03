@@ -9,3 +9,4 @@ import './SideBar';
 import './StatusBar';
 import './FormSwitch';
 import './TsLogo';
+import './Spinner';

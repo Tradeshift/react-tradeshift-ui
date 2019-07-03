@@ -290,6 +290,8 @@ exports[`SideBar SideBar tabs 1`] = `
 </portal>
 `;
 
+exports[`Spinner Basic usage 1`] = `null`;
+
 exports[`StatusBar (deprecated) Hide bar 1`] = `null`;
 
 exports[`StatusBar (deprecated) Show buttons 1`] = `null`;
