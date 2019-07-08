@@ -44,6 +44,7 @@ exports[`Aside Controlled mode 1`] = `
         >
           <button
             disabled={false}
+            type="submit"
           >
             <span>
               Menu item
@@ -68,7 +69,7 @@ exports[`Form Basic structure 1`] = `
 />
 `;
 
-exports[`Form FormSwitch should be used in a form 1`] = `
+exports[`Form FormSwitch 1`] = `
 <form
   data-ts="Form"
 >
@@ -84,13 +85,11 @@ exports[`Form FormSwitch should be used in a form 1`] = `
       </span>
       <input
         checked={true}
-        defaultChecked={undefined}
         disabled={false}
         id="switch-one"
         name=""
         onChange={[Function]}
         type="checkbox"
-        value={undefined}
       />
     </label>
   </fieldset>
@@ -105,14 +104,12 @@ exports[`Form FormSwitch should be used in a form 1`] = `
         Switch two
       </span>
       <input
-        checked={undefined}
         defaultChecked={true}
         disabled={false}
         id="switch-two"
         name=""
         onChange={[Function]}
         type="checkbox"
-        value={undefined}
       />
     </label>
   </fieldset>
@@ -134,6 +131,7 @@ exports[`Menu Basic usage 1`] = `
   >
     <button
       disabled={false}
+      type="submit"
     >
       <span>
         Menu item 1
@@ -148,6 +146,7 @@ exports[`Menu Basic usage 1`] = `
   >
     <button
       disabled={false}
+      type="submit"
     >
       <span>
         Menu item 2
@@ -180,6 +179,7 @@ exports[`Modal Controlled mode 1`] = `
           <button
             className="ts-primary"
             onClick={[Function]}
+            type="submit"
           >
             <span>
               Close the Modal
@@ -192,7 +192,7 @@ exports[`Modal Controlled mode 1`] = `
 </portal>
 `;
 
-exports[`Modal Controlled mode w/ buttons 1`] = `
+exports[`Modal Controlled mode with buttons 1`] = `
 <portal>
   <dialog
     data-ts="Modal"
@@ -215,6 +215,7 @@ exports[`Modal Controlled mode w/ buttons 1`] = `
           <button
             className="ts-primary"
             onClick={[Function]}
+            type="submit"
           >
             <span>
               Close the Modal

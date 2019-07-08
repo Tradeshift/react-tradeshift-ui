@@ -1,20 +1,17 @@
-import { configure, setAddon, addDecorator } from '@storybook/react';
-import { setOptions } from '@storybook/addon-options';
+import { configure, addParameters, addDecorator } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import infoAddon from '@storybook/addon-info';
+import { withInfo } from '@storybook/addon-info';
 
-setAddon(infoAddon);
+addDecorator(withInfo);
 addDecorator(withKnobs);
 
-setOptions({
-	name: 'React-tradeshift-ui',
-	url: 'https://github.com/Tradeshift/react-tradeshift-ui',
-	goFullScreen: false,
-	showLeftPanel: true,
-	showDownPanel: true,
-	showSearchBox: false,
-	downPanelInRight: true,
-	sortStoriesByKind: false
+addParameters({
+	options: {
+		name: 'React-tradeshift-ui',
+		url: 'https://github.com/Tradeshift/react-tradeshift-ui',
+		showPanel: true,
+		panelPosition: 'right'
+	}
 });
 
 configure(function loadStories() {

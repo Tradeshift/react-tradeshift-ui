@@ -1,6 +1,14 @@
 /* eslint-disable global-require */
+import React from 'react';
+import PropTypes from 'prop-types';
+
 jest.mock('@storybook/react', () => require('./__mocks__/storybook'));
 jest.mock('@storybook/addon-knobs', () => require('./__mocks__/knobs'));
+const Portal = ({ children }) => <portal>{children}</portal>;
+jest.doMock('react-portal', () => ({
+	__esModule: true,
+	Portal
+}));
 window.ts = {
 	ui: {
 		ready: cb => cb(),
@@ -28,4 +36,7 @@ window.ts = {
 			hide: jest.fn()
 		}
 	}
+};
+Portal.propTypes = {
+	children: PropTypes.object.isRequired
 };

@@ -1,15 +1,13 @@
 import React from 'react';
-import { storiesOf, action } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { text, boolean } from '@storybook/addon-knobs';
-
+import { action } from '@storybook/addon-actions';
 import { Modal } from '../components';
 
 const stories = storiesOf('Modal', module);
 
-stories.addWithInfo(
+stories.add(
 	'Controlled mode',
-	`In controlled mode the Modal will respect the isOpen attribute at all times.
-	Use the onClose callback to toggle the flag.`,
 	() => (
 		<Modal
 			title={text('title', 'Fullscreen Modal demo')}
@@ -23,20 +21,21 @@ stories.addWithInfo(
 				<h1>A Modal Example</h1>
 				<p>…</p>
 				<p>
-					<button onClick={action('onClose')} className="ts-primary">
+					<button type="submit" onClick={action('onClose')} className="ts-primary">
 						<span>Close the Modal</span>
 					</button>
 				</p>
 			</main>
 		</Modal>
 	),
-	{ inline: true }
+	{
+		info: `In controlled mode the Modal will respect the isOpen attribute at all times.
+	Use the onClose callback to toggle the flag.`
+	}
 );
 
-stories.addWithInfo(
-	'Controlled mode w/ buttons',
-	`In controlled mode the Modal will respect the isOpen attribute at all times.
-	Use the onClose callback to toggle the flag.`,
+stories.add(
+	'Controlled mode with buttons',
 	() => {
 		const buttons = [
 			{
@@ -61,7 +60,7 @@ stories.addWithInfo(
 					<h1>A Modal Example</h1>
 					<p>…</p>
 					<p>
-						<button onClick={action('onClose')} className="ts-primary">
+						<button type="submit" onClick={action('onClose')} className="ts-primary">
 							<span>Close the Modal</span>
 						</button>
 					</p>
@@ -69,5 +68,8 @@ stories.addWithInfo(
 			</Modal>
 		);
 	},
-	{ inline: true }
+	{
+		info: `In controlled mode the Modal will respect the isOpen attribute at all times.
+	Use the onClose callback to toggle the flag.`
+	}
 );

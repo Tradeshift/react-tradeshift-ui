@@ -1,20 +1,25 @@
 import React from 'react';
-import { storiesOf, action } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 import { Note } from '../components';
 
 const stories = storiesOf('Note', module);
 
-stories.addWithInfo(
+stories.add(
 	'Basic usage',
-	'Notes are toggled by rendering and removing them frmo the DOM. You can only have one note on a page at a time.',
 	() => {
 		const shouldShow = boolean('shouldShow', true);
 		const noteText = text('text', 'My awesome note');
 		const icon = text('icon', 'ts-icon-apps');
-		return shouldShow
-			? <Note icon={icon} text={noteText} onClose={action('onClose')} />
-			: 'Totally not a Note';
+		return shouldShow ? (
+			<Note icon={icon} text={noteText} onClose={action('onClose')} />
+		) : (
+			'Totally not a Note'
+		);
 	},
-	{ inline: true }
+	{
+		info:
+			'Notes are toggled by rendering and removing them frmo the DOM. You can only have one note on a page at a time.'
+	}
 );

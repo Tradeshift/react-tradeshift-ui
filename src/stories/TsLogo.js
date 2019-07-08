@@ -4,4 +4,4 @@ import { TsLogo } from '../components';
 
 const stories = storiesOf('TsLogo', module);
 
-stories.addWithInfo('Basic usage', () => <TsLogo />, { inline: true });
+stories.add('Basic usage', () => <TsLogo />);

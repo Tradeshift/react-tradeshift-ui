@@ -1,14 +1,12 @@
 import React from 'react';
-import { storiesOf, action } from '@storybook/react';
-import { text, boolean, number } from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { text, boolean, number } from '@storybook/addon-knobs/react';
 import { Aside, Menu, MenuItem } from '../components';
 
 const stories = storiesOf('Aside', module);
-
-stories.addWithInfo(
+stories.add(
 	'Controlled mode',
-	`In controlled mode the aside will respect the isOpen attribute at all times.
-	Use the onClose callback to toggle the flag.`,
 	() => (
 		<Aside
 			title={text('title', 'Aside demo')}
@@ -26,12 +24,14 @@ stories.addWithInfo(
 			</Menu>
 		</Aside>
 	),
-	{ inline: true }
+	{
+		info: `In controlled mode the aside will respect the isOpen attribute at all times
+				Use the onClose callback to toggle the flag.`
+	}
 );
 
-stories.addWithInfo(
+stories.add(
 	'Aside tabs',
-	'Aside may contain tabs content. Just define some Panels in specified format',
 	() => {
 		const tabCount = number('tabCount', 2, {
 			range: true,
@@ -67,5 +67,5 @@ stories.addWithInfo(
 			</Aside>
 		);
 	},
-	{ inline: true }
+	{ info: 'Aside may contain tabs content. Just define some Panels in specified format' }
 );
