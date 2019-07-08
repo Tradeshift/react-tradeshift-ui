@@ -1,13 +1,14 @@
 import React from 'react';
-import { storiesOf, action } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 import { Form, FormSwitch } from '../components';
 
 const stories = storiesOf('Form', module);
 
-stories.addWithInfo(
-	'FormSwitch should be used in a form',
-	() =>
+stories.add(
+	'FormSwitch',
+	() => (
 		<Form>
 			<fieldset>
 				<span>Controlled mode</span>
@@ -28,6 +29,7 @@ stories.addWithInfo(
 					defaultChecked
 				/>
 			</fieldset>
-		</Form>,
-	{ inline: true }
+		</Form>
+	),
+	{ info: 'FormSwitch should be used in a form' }
 );
