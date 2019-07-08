@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const reactExternal = {
 	root: 'React',
@@ -26,7 +26,8 @@ const config = {
 		components: './src/components/index.js'
 	},
 	output: {
-		filename: './dist/[name].js',
+		path: path.resolve(__dirname, 'dist'),
+		filename: '[name].js',
 		library: 'TSReact',
 		libraryTarget: 'umd'
 	},
@@ -38,9 +39,9 @@ const config = {
 			{
 				exclude: [/\.html$/, /\.(js|jsx)$/, /\.css$/, /\.json$/, /\.svg$/],
 				loader: 'url-loader',
-				query: {
+				options: {
 					limit: 10000,
-					name: 'dist/[name].[ext]'
+					name: '[name].[ext]'
 				}
 			},
 			// Process JS with Babel.
@@ -51,11 +52,12 @@ const config = {
 			},
 			{
 				test: /\.css$/,
-				loader: ExtractTextPlugin.extract({
-					fallback: 'style-loader',
-					use: 'css-loader'
-				})
-				// Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+				use: [
+					{
+						loader: MiniCssExtractPlugin.loader
+					},
+					'css-loader'
+				]
 			},
 			// JSON is not enabled by default in Webpack but both Node and Browserify
 			// allow it implicitly so we also enable it.
@@ -67,8 +69,8 @@ const config = {
 			{
 				test: /\.svg$/,
 				loader: 'file-loader',
-				query: {
-					name: 'dist/[name].[ext]'
+				options: {
+					name: '[name].[ext]'
 				}
 			}
 			// ** STOP ** Are you adding a new loader?
@@ -78,8 +80,9 @@ const config = {
 	plugins: [
 		// This helps ensure the builds are consistent if source hasn't changed:
 		new webpack.optimize.OccurrenceOrderPlugin(),
-		// Note: this won't work without ExtractTextPlugin.extract(..) in `loaders`.
-		new ExtractTextPlugin('./dist/[name].css')
+		new MiniCssExtractPlugin({
+			filename: '[name].css'
+		})
 	],
 	// Some libraries import Node modules but don't use them in the browser.
 	// Tell Webpack to provide empty mocks for them so importing them works.

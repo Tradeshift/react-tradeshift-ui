@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Portal from 'react-portal';
+import { Portal } from 'react-portal';
 
 const noop = () => {};
 
@@ -55,7 +55,7 @@ class Modal extends Component {
 			'data-ts.open': this.props.isOpen
 		};
 		return (
-			<Portal isOpened>
+			<Portal>
 				<dialog data-ts="Modal" {...modalProps} ref={this.onRef}>
 					<div data-ts="Panel">{this.props.children}</div>
 				</dialog>

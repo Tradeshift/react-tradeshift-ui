@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Form = props =>
+const Form = props => (
 	<form data-ts="Form" {...props}>
 		{props.children}
-	</form>;
+	</form>
+);
 
 Form.defaultProps = {
 	children: []

@@ -1,7 +1,9 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import Modal from '.';
 
-import Modal from './';
+configure({ adapter: new Adapter() });
 
 describe('Modal', () => {
 	// Add specific tests for ui-spirit related functions

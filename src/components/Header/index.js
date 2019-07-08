@@ -15,20 +15,20 @@ class Header extends Component {
 			if (visible) {
 				if (color) {
 					switch (color) {
-					case COLOR.BLUE:
-						bar.blue();
-						break;
-					case COLOR.DARK:
-						bar.dark();
-						break;
-					case COLOR.GREEN:
-						bar.green();
-						break;
-					case COLOR.PURPLE:
-						bar.purple();
-						break;
-					default:
-						break;
+						case COLOR.BLUE:
+							bar.blue();
+							break;
+						case COLOR.DARK:
+							bar.dark();
+							break;
+						case COLOR.GREEN:
+							bar.green();
+							break;
+						case COLOR.PURPLE:
+							bar.purple();
+							break;
+						default:
+							break;
 					}
 				}
 
