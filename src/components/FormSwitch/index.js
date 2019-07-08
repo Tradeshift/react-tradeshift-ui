@@ -50,7 +50,6 @@ Switch.propTypes = {
 };
 
 Switch.defaultProps = {
-	label: '',
 	name: '',
 	value: undefined,
 	checked: undefined,
