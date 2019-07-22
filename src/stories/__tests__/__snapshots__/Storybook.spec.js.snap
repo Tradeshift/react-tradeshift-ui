@@ -44,7 +44,7 @@ exports[`Aside Controlled mode 1`] = `
         >
           <button
             disabled={false}
-            type="submit"
+            type="button"
           >
             <span>
               Menu item
@@ -131,7 +131,7 @@ exports[`Menu Basic usage 1`] = `
   >
     <button
       disabled={false}
-      type="submit"
+      type="button"
     >
       <span>
         Menu item 1
@@ -146,7 +146,7 @@ exports[`Menu Basic usage 1`] = `
   >
     <button
       disabled={false}
-      type="submit"
+      type="button"
     >
       <span>
         Menu item 2
