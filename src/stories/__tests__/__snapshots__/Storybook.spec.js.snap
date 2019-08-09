@@ -230,6 +230,67 @@ exports[`Modal Controlled mode with buttons 1`] = `
 
 exports[`Note Basic usage 1`] = `null`;
 
+exports[`SideBar Controlled mode 1`] = `
+<portal>
+  <aside
+    data-ts="SideBar"
+    data-ts.busy={undefined}
+    data-ts.open={false}
+    data-ts.title="SideBar demo"
+  >
+    <div
+      data-ts="Panel"
+    >
+      <menu
+        data-ts="Menu"
+      >
+        <li
+          className=""
+        >
+          <button
+            disabled={false}
+          >
+            <span>
+              Menu item
+            </span>
+          </button>
+        </li>
+      </menu>
+    </div>
+  </aside>
+</portal>
+`;
+
+exports[`SideBar SideBar tabs 1`] = `
+<portal>
+  <aside
+    data-ts="SideBar"
+    data-ts.busy={undefined}
+    data-ts.open={false}
+    data-ts.title="SideBar demo"
+  >
+    <div
+      data-ts="Panel"
+      data-ts.label="tab 0"
+    >
+      tab 0 content
+    </div>
+    <div
+      data-ts="Panel"
+      data-ts.label="tab 1"
+    >
+      tab 1 content
+    </div>
+    <div
+      data-ts="Panel"
+      data-ts.label="tab 2"
+    >
+      tab 2 content
+    </div>
+  </aside>
+</portal>
+`;
+
 exports[`StatusBar (deprecated) Hide bar 1`] = `null`;
 
 exports[`StatusBar (deprecated) Show buttons 1`] = `null`;

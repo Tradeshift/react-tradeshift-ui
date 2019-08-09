@@ -9,3 +9,4 @@ export { default as FormSwitch } from './FormSwitch';
 export { default as TsLogo } from './TsLogo';
 export { default as Header } from './Header';
 export { default as Footer } from './Footer';
+export { default as SideBar } from './SideBar';

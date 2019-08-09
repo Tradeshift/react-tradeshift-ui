@@ -5,6 +5,7 @@ import './Header';
 import './Menu';
 import './Modal';
 import './Note';
+import './SideBar';
 import './StatusBar';
 import './FormSwitch';
 import './TsLogo';
