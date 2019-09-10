@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Portal from 'react-portal';
+import { Portal } from 'react-portal';
 
 const noop = () => {};
 
@@ -63,7 +63,7 @@ class SideBar extends Component {
 
 		const content = SideBar.wrapContent(this.props.children);
 		return (
-			<Portal isOpened>
+			<Portal>
 				<aside data-ts="SideBar" {...asideProps} ref={this.onRef}>
 					{content}
 				</aside>
