@@ -81,7 +81,7 @@ const config = {
 		// This helps ensure the builds are consistent if source hasn't changed:
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new MiniCssExtractPlugin({
-			filename: 'assets/[name].css'
+			filename: '[name].css'
 		})
 	],
 	// Some libraries import Node modules but don't use them in the browser.

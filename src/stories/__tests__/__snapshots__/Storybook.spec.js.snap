@@ -234,7 +234,6 @@ exports[`SideBar Controlled mode 1`] = `
 <portal>
   <aside
     data-ts="SideBar"
-    data-ts.busy={undefined}
     data-ts.open={false}
     data-ts.title="SideBar demo"
   >
@@ -249,6 +248,7 @@ exports[`SideBar Controlled mode 1`] = `
         >
           <button
             disabled={false}
+            type="button"
           >
             <span>
               Menu item
@@ -265,7 +265,6 @@ exports[`SideBar SideBar tabs 1`] = `
 <portal>
   <aside
     data-ts="SideBar"
-    data-ts.busy={undefined}
     data-ts.open={false}
     data-ts.title="SideBar demo"
   >

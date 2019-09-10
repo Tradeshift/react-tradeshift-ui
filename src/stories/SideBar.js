@@ -1,14 +1,13 @@
 import React from 'react';
-import { storiesOf, action } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import { text, boolean, number } from '@storybook/addon-knobs';
 import { SideBar, Menu, MenuItem } from '../components';
 
 const stories = storiesOf('SideBar', module);
 
-stories.addWithInfo(
+stories.add(
 	'Controlled mode',
-	`In controlled mode the side bar will respect the isOpen attribute at all times.
-	Use the onClose callback to toggle the flag.`,
 	() => (
 		<SideBar
 			title={text('title', 'SideBar demo')}
@@ -25,12 +24,14 @@ stories.addWithInfo(
 			</Menu>
 		</SideBar>
 	),
-	{ inline: true }
+	{
+		info: `In controlled mode the side bar will respect the isOpen attribute at all times.
+	Use the onClose callback to toggle the flag`
+	}
 );
 
-stories.addWithInfo(
+stories.add(
 	'SideBar tabs',
-	'SideBar may contain tabs content. Just define some Panels in specified format',
 	() => {
 		const tabCount = number('tabCount', 3, {
 			range: true,
@@ -66,5 +67,7 @@ stories.addWithInfo(
 			</SideBar>
 		);
 	},
-	{ inline: true }
+	{
+		info: 'SideBar may contain tabs content. Just define some Panels in specified format'
+	}
 );
