@@ -298,6 +298,45 @@ exports[`StatusBar (deprecated) Show buttons 1`] = `null`;
 
 exports[`StatusBar (deprecated) Show message 1`] = `null`;
 
+exports[`Table Basic usage 1`] = `null`;
+
+exports[`Tag Label-Text 1`] = `
+<figure
+  data-ts="Tag"
+  id="tag2"
+/>
+`;
+
+exports[`Tag Tag with ondelete function 1`] = `
+<figure
+  data-ts="Tag"
+  id="tag4"
+/>
+`;
+
+exports[`Tag Tag with type 1`] = `
+<figure
+  data-ts="Tag"
+  id="tag3"
+/>
+`;
+
+exports[`Tag Text only 1`] = `
+<figure
+  data-ts="Tag"
+  id="tag1"
+/>
+`;
+
+exports[`Tooltip Basic usage 1`] = `
+<div
+  data-ts="Tooltip"
+  id="tooltip-example"
+>
+  Tooltip will show on mouse hover.
+</div>
+`;
+
 exports[`TsLogo Basic usage 1`] = `
 <svg
   className="ts-logo"
