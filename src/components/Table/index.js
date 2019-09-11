@@ -27,7 +27,7 @@ const Table = props => {
 			return;
 		}
 		renderTable(props);
-	}, [props]);
+	});
 
 	return <div data-ts="Table" id={props.id} className={props.className} />;
 };

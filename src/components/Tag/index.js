@@ -17,7 +17,7 @@ const Tag = props => {
 				};
 			}
 		});
-	}, [props]);
+	}, [id, label, text, type, onDelete]);
 	return <figure id={id} data-ts="Tag" />;
 };
 
