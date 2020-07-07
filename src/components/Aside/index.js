@@ -2,13 +2,23 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Portal } from 'react-portal';
 
-const noop = () => {};
+const noop = () => { };
 
 class Aside extends Component {
 	static wrapContent(nodes) {
 		const children = React.Children.toArray(nodes);
 		const wrappedTabs = children.every(node => node.props['data-ts'] === 'Panel');
-		return nodes && wrappedTabs ? nodes : <div data-ts="Panel">{nodes}</div>;
+		if (nodes && wrappedTabs) {
+			if (children.length === 1) {
+				return nodes;
+			}
+			else {
+				return <div data-ts="Panels">{nodes}</div>;
+			}
+		}
+		else {
+			return <div data-ts="Panel">{nodes}</div>;
+		}
 	}
 
 	constructor(props) {

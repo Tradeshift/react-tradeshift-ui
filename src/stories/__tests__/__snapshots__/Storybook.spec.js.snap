@@ -9,16 +9,20 @@ exports[`Aside Aside tabs 1`] = `
     data-ts.title="Aside demo"
   >
     <div
-      data-ts="Panel"
-      data-ts.label="tab 0"
+      data-ts="Panels"
     >
-      tab 0 content
-    </div>
-    <div
-      data-ts="Panel"
-      data-ts.label="tab 1"
-    >
-      tab 1 content
+      <div
+        data-ts="Panel"
+        data-ts.label="tab 0"
+      >
+        tab 0 content
+      </div>
+      <div
+        data-ts="Panel"
+        data-ts.label="tab 1"
+      >
+        tab 1 content
+      </div>
     </div>
   </aside>
 </portal>
