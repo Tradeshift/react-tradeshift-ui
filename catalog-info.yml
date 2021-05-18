@@ -1,0 +1,12 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: react-tradeshift-ui
+  description: React components and storybook for Tradeshift UI
+  annotations:
+    github.com/project-slug: tradeshift/react-tradeshift-ui
+spec:
+  type: library
+  lifecycle: production
+  owner: partner-enablement-and-apps
