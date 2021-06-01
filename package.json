@@ -50,6 +50,7 @@
 		"@storybook/addon-options": "^5.1.9",
 		"@storybook/addons": "^5.1.9",
 		"@storybook/react": "^5.1.9",
+		"@types/classnames": "^2.2.8",
 		"@types/jest": "^24.0.15",
 		"@types/react": "^16.9.23",
 		"@types/react-dom": "^16.9.5",
@@ -81,7 +82,6 @@
 		"validate-commit-msg": "^2.14.0"
 	},
 	"dependencies": {
-		"@types/classnames": "2.2.8",
 		"classnames": "^2.2.6",
 		"prop-types": "^15.7.2",
 		"react-portal": "^4.2.0"
