@@ -4,8 +4,6 @@ dist
 .opt-in
 .opt-out
 .eslintcache
-package-lock.json
-
 
 ## IDE files
 *.iml
