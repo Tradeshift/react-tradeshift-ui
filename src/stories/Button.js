@@ -53,7 +53,7 @@ stories.add(
 );
 
 stories.add(
-	'Mirco button',
+	'Micro button',
 	() => (
 		<Button className="ts-primary ts-micro">
 			<span>Micro Button</span>
@@ -61,7 +61,7 @@ stories.add(
 	),
 	{
 		info:
-			'A mirco Button requires `ts-micro` and one of `ts-primary` `ts-secondary` `ts-tertiary` className',
+			'A micro Button requires `ts-micro` and one of `ts-primary` `ts-secondary` `ts-tertiary` className',
 	},
 );
 

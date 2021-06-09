@@ -14,7 +14,7 @@ jest.doMock('react-portal', () => ({
 window.ts = {
 	ui: {
 		ready: (cb) => cb(),
-		Note: jest.fn().mockReturnValue({}),
+		Note: () => ({ close() {} }),
 		Notification: jest.fn().mockReturnValue({}),
 		StatusBar: {
 			linkable: jest.fn(),
@@ -41,7 +41,7 @@ window.ts = {
 	},
 };
 global.document = new JSDOM().window.document;
-global.document.getElementById = jest.fn().mockReturnValue(document.createElement('tooltip'));
+global.document.getElementById = () => document.createElement('tooltip');
 
 Portal.propTypes = {
 	children: PropTypes.object.isRequired,

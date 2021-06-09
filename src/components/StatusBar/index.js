@@ -3,11 +3,21 @@ import PropTypes from 'prop-types';
 
 class StatusBar extends Component {
 	componentDidMount() {
-		this.update(this.props.visible, this.props.linkable, this.props.message, this.props.buttons);
+		this.update(
+			this.props.visible,
+			this.props.linkable,
+			this.props.message,
+			this.props.buttons,
+		);
 	}
 
 	componentDidUpdate() {
-		this.update(this.props.visible, this.props.linkable, this.props.message, this.props.buttons);
+		this.update(
+			this.props.visible,
+			this.props.linkable,
+			this.props.message,
+			this.props.buttons,
+		);
 	}
 
 	componentWillUnmount() {

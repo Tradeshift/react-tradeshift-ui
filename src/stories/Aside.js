@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { text, boolean, number } from '@storybook/addon-knobs/react';
+import { text, boolean, number } from '@storybook/addon-knobs';
 import { Aside, Menu, MenuItem } from '../components';
 
 const stories = storiesOf('Aside', module);

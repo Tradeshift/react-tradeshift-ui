@@ -1,43 +1,34 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import { mount, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import StatusBar from '.';
-
-configure({ adapter: new Adapter() });
 
 describe('StatusBar', () => {
 	let wrapper;
-	let component;
+	let hide;
 	// Add specific tests for ui-spirit related functions
 	describe('lifecycle', () => {
 		beforeEach(() => {
-			wrapper = mount(<StatusBar message="Foo" />);
-			component = wrapper.instance();
+			jest.restoreAllMocks();
+			hide = jest.spyOn(window.ts.ui.StatusBar, 'hide');
+			wrapper = render(<StatusBar message="Foo" />);
 		});
 
 		it('updates on prop change', () => {
-			StatusBar.prototype.update = jest.fn(StatusBar.prototype.update);
-			wrapper.setProps({
-				visible: true,
-				linkable: true,
-				message: 'Bar',
-				buttons: [],
-			});
-			expect(component.update).toHaveBeenCalledWith(true, true, 'Bar', []);
+			const updateSpy = jest.spyOn(StatusBar.prototype, 'update');
+			wrapper.rerender(
+				<StatusBar message="Bar" visible linkable buttons={[]} />,
+			);
+			expect(updateSpy).toHaveBeenCalledWith(true, true, 'Bar', []);
 		});
 
 		it('hides if visible prop is false', () => {
-			expect(component.bar).toBeDefined();
-			wrapper.setProps({
-				visible: false,
-			});
-			expect(component.bar.hide).toHaveBeenCalled();
+			wrapper.rerender(<StatusBar message="Foo" visible={false} />);
+			expect(hide).toHaveBeenCalled();
 		});
 
 		it('hides on unmount', () => {
-			expect(component.bar).toBeDefined();
 			wrapper.unmount();
-			expect(component.bar.hide).toHaveBeenCalled();
+			expect(hide).toHaveBeenCalled();
 		});
 	});
 });

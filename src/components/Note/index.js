@@ -3,6 +3,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Note extends React.Component {
+	constructor(...args) {
+		super(...args);
+		this.update = this.update.bind(this);
+		this.note = null;
+		this.update(this.props);
+	}
+
 	componentDidMount() {
 		this.update(this.props);
 	}
@@ -19,15 +26,17 @@ class Note extends React.Component {
 	}
 
 	update(props) {
+		const component = this;
 		window.ts.ui.ready(() => {
-			this.note = window.ts.ui.Note({
+			const note = window.ts.ui.Note({
 				icon: props.icon,
 				text: props.text,
 				onclose: props.onClose,
 			});
-			this.note.icon = props.icon;
-			this.note.text = props.text;
-			this.note.onclose = props.onClose;
+			note.icon = props.icon;
+			note.text = props.text;
+			note.onclose = props.onClose;
+			component.note = note;
 		});
 	}
 

@@ -1,24 +1,30 @@
-<link rel="stylesheet" href="//d5wfroyti11sa.cloudfront.net/prod/client/ts-12.3.0.min.css" />
+<link
+	rel="stylesheet"
+	href="//d5wfroyti11sa.cloudfront.net/prod/client/ts-12.3.0.min.css"
+/>
 <script src="//d5wfroyti11sa.cloudfront.net/prod/client/ts-12.3.0.min.js"></script>
 
 <style>
 	.ts-maincontent {
 		padding: 2em;
-		background-color: #FFF;
+		background-color: #fff;
+	}
+	/* override a thing */
+	body {
+		display: flex !important;
 	}
 </style>
 <script>
 	ts.ui.ready(function() {
 		// Move the root element into the Tradeshift UI Template:
-		var app = document.createElement('app');
-		var main = document.createElement('main');
-		var root = document.getElementById('root');
-		app.setAttribute('data-ts','App');
-		root.setAttribute('data-ts', 'MainContent');
-		main.setAttribute('data-ts', 'Main');
+		var app = document.createElement("app");
+		var main = document.createElement("main");
+		var root = document.getElementById("root");
+		app.setAttribute("data-ts", "App");
+		root.setAttribute("data-ts", "MainContent");
+		main.setAttribute("data-ts", "Main");
 		main.appendChild(root);
 		app.appendChild(main);
 		document.body.appendChild(app);
 	});
-
 </script>

@@ -27,7 +27,8 @@
 		"react/forbid-prop-types": ["error", { "forbid": ["any"] }],
 		"object-curly-newline": "off",
 		"operator-linebreak": "off",
-		"indent": "off"
+		"indent": "off",
+		"react/jsx-props-no-spreading": "off"
 	},
 	"settings": {
 		"import/core-modules": [

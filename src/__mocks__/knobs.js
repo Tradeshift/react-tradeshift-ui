@@ -4,4 +4,4 @@ export const text = defaultVal;
 export const label = defaultVal;
 export const boolean = defaultVal;
 export const number = defaultVal;
-export const select = (data) => data;
+export const select = (data, options, defaultValue) => defaultValue || data;

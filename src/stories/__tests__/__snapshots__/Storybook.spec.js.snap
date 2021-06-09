@@ -101,7 +101,7 @@ exports[`Button Icon button 1`] = `
 </button>
 `;
 
-exports[`Button Mirco button 1`] = `
+exports[`Button Micro button 1`] = `
 <button
   className="ts-primary ts-micro"
   data-ts="Button"
