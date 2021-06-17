@@ -21,6 +21,13 @@ $ npm install react-tradeshift-ui
 
 *Note:* Requires [Tradeshift ui](http://ui.tradeshift.com/#getstarted/) explicitly loaded on your page.
 
+## Usage
+
+Import and use the component(s).
+```javascript
+import { Footer, TsLogo } from 'react-tradeshift-ui';
+```
+
 ## Development
 Development with minimal setup via [Storybook](https://github.com/storybooks/storybook) and
 [react-scripts](https://github.com/facebookincubator/create-react-app).
